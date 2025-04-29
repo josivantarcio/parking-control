@@ -1,22 +1,24 @@
-# Parking Control
+# Parking Control System
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-![Eclipse IDE](https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
 
-This is a parking control system developed in Java, designed to run on Linux Ubuntu, and built using the Eclipse IDE. The system allows for the management of parking spaces, including adding, updating, and removing parked vehicles.
+This is a parking control system developed using Java and Spring Boot. It allows for the management of parking spaces, including adding, updating, and removing parked vehicles. The system is designed to be containerized using Docker and deployable on AWS.
 
 ## Technologies Used
 
 - **Java 17 LTS**: Programming language used for developing the application.
-- **Ubuntu**: Operating system for development and deployment.
-- **Eclipse IDE**: Integrated Development Environment used for coding and debugging.
+- **Spring Boot 2.7.x**: Framework for building the application.
+- **Docker**: Containerization platform.
+- **AWS**: Cloud platform for deployment.
 
 ## Requirements
 
 - **JDK 17** or higher
-- **Ubuntu 20.04** or higher
-- **Eclipse IDE** or any other preferred Java IDE
+- **Docker**: For containerization
+- **AWS Account**: For deployment
 
 ## Project Setup
 
@@ -26,17 +28,16 @@ This is a parking control system developed in Java, designed to run on Linux Ubu
     cd parking-control
     ```
 
-2. **Import the project into Eclipse IDE**:
-    - Open Eclipse IDE.
-    - Select `File > Import`.
-    - Choose `Existing Maven Projects` and click `Next`.
-    - Browse to the cloned repository directory and click `Finish`.
+2. **Build and run using Docker**:
+    ```bash
+    docker build -t parking-control .
+    docker run -p 8080:8080 parking-control
+    ```
 
-3. **Run the project**:
-    - In Eclipse, right-click on the project in the Project Explorer.
-    - Select `Run As > Java Application`.
-
-The application will start and you can interact with the parking control system through its interface.
+3. **Deploy on AWS**:
+    - Create an ECS cluster and task definition.
+    - Push the Docker image to ECR.
+    - Create an ECS service and run the task.
 
 ## Features
 
@@ -48,28 +49,6 @@ The application will start and you can interact with the parking control system 
 ## License
 
 This project is licensed under the terms of the MIT license. See the [LICENSE](LICENSE) file for details.
-
-```
-MIT License
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
 
 ## Contribution
 
